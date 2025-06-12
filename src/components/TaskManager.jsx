@@ -84,16 +84,6 @@ const TaskManager = () => {
     }
   };
 
-  // ✅ BONUS: Marquer comme complète
-  const handleToggleComplete = async (task) => {
-    try {
-      const updatedTask = await api.toggleComplete(task.id);
-      setTasks(tasks.map(t => t.id === task.id ? updatedTask : t));
-    } catch (error) {
-      alert('❌ Erreur lors du changement de statut');
-    }
-  };
-
   if (loading) return <div>⏳ Chargement...</div>;
 
   return (

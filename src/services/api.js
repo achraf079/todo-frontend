@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000'; // Ajuste selon ton port backend
+const API_BASE_URL = 'http://localhost:5173';
 
 export const api = {
   // Récupérer toutes les tâches
@@ -38,14 +38,5 @@ export const api = {
     });
     if (!response.ok) throw new Error('Erreur lors de la suppression');
     return true;
-  },
-
-  // BONUS: Toggle complete
-  toggleComplete: async (id) => {
-    const response = await fetch(`${API_BASE_URL}/tasks/${id}/complete`, {
-      method: 'PUT',
-    });
-    if (!response.ok) throw new Error('Erreur toggle');
-    return response.json();
-  },
+  }
 };
