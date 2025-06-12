@@ -14,7 +14,8 @@ const TodoPage = () => {
   const handleFetchTasks = async () => setTasks(await api.get('/tasks'));
 
   const handleDelete = async (id: number) => {
-    // @todo IMPLEMENT HERE : DELETE THE TASK & REFRESH ALL THE TASKS, DON'T FORGET TO ATTACH THE FUNCTION TO THE APPROPRIATE BUTTON
+    await api.delete(`/tasks/${id}`);
+    await handleFetchTasks();
   }
 
   const handleSave = async () => {
@@ -42,7 +43,7 @@ const TodoPage = () => {
                 <IconButton color="success" disabled>
                   <Check />
                 </IconButton>
-                <IconButton color="error" onClick={() => {}}>
+                <IconButton color="error" onClick={() => handleDelete(task.id)}>
                   <Delete />
                 </IconButton>
               </Box>
@@ -51,7 +52,7 @@ const TodoPage = () => {
         }
 
         <Box display="flex" justifyContent="center" alignItems="center" mt={2}>
-          <Button variant="outlined" onClick={() => {}}>Ajouter une tâche</Button>
+          <Button variant="outlined" onClick={handleSave}>Ajouter une tâche</Button>
         </Box>
       </Box>
     </Container>
