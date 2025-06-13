@@ -141,5 +141,5 @@ L’application sera accessible sur `http://localhost:5173`
 ## Contact
 
 Pour toute question, problème ou suggestion :
-Email : Achrafsaber007@hotmail.com
-GitHub : https://github.com/achraf079
+- Email : Achrafsaber007@hotmail.com
+- GitHub : https://github.com/achraf079
