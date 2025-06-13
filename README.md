@@ -1,4 +1,3 @@
-````
 # Todo List Fullstack Project
 
 Ce projet est une application Todo List développée avec **React** pour le front-end et **NestJS** pour le back-end.  
